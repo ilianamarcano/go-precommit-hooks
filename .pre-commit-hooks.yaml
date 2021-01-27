@@ -1,7 +1,6 @@
 -   id: gocheckcov
     name: 'go gocheckcov'
     entry: run-gocheckcov.sh
-    #files: '\.go$'
-    files: '^.*_(test|stub)\.go'
+    files: '\.go$'
     language: 'script'
     description: "Runs `gocheckcov`, requires golang"
