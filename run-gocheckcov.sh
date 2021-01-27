@@ -8,7 +8,8 @@ if [ $# -eq 0 ]; then
 fi
 
 
-gocheckcov check "$@"  ${FILES}
+
+gocheckcov check "$1"  ${FILES}
 
 returncode=$?
 if [ $returncode -ne 0 ]; then
