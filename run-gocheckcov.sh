@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-FILES=$(go list ./...  | grep -v /vendor/)
 
 if [ $# -eq 0 ]; then
     echo "No arguments supplied"
@@ -7,9 +6,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-
-
-gocheckcov check "$1"  ${FILES}
+gocheckcov check "$@"
 
 returncode=$?
 if [ $returncode -ne 0 ]; then

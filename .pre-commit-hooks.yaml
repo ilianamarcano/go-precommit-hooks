@@ -3,4 +3,5 @@
     entry: run-gocheckcov.sh
     files: '\.go$'
     language: 'script'
+    pass_filenames: false
     description: "Runs `gocheckcov`, requires golang"
