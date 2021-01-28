@@ -14,7 +14,7 @@ FILES=$(go list ./...  |  sed  's,'"${PACKAGE}"',,' |  grep -v "${EXCLUDE}" | ta
 PASS=true
 for FILE in $FILES; do
   gocheckcov check "$1" "$FILE"
-  if [ "$?" -eq 1 ]; then
+  if [ "$?" -ne 0 ]; then
     PASS=false
   fi
 done
